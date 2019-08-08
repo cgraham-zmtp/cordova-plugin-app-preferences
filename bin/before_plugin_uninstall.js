@@ -15,7 +15,8 @@ module.exports = function (context) {
 		.then(function (config) {
 			return Q.all([
 				android.clean(config),
-				ios.clean(config)
+				ios.clean(config),
+				// browser.clean(config), // NOT IMPLEMENTED
 			]);
 		})
 		.then(settings.remove)
